@@ -21,16 +21,17 @@
 
 
 module Inst_Mem#(parameter AddrSize = 32, Length = 2**AddrSize,Inst_Size = 32)(
+    input clk,
     input [AddrSize-1:0] addr,
-    output [Inst_Size-1:0] inst
+    output reg [Inst_Size-1:0] inst
     );
 
-reg [Inst_Size-1:0]mem[0:Length-1];
+reg [Inst_Size-1:0]mem[0:1023];
 
 initial begin
-    $readmemh("program_dump.hex", mem);  // Load memory from hex file
+    $readmemh("C:/Users/arun/Desktop/program_dump.hex", mem);  // Load memory from hex file
 end
-
-assign inst = mem[addr];
-
+always@(posedge clk)begin
+    inst <= mem[addr];
+end
 endmodule
