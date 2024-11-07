@@ -28,6 +28,6 @@ HA_Param #(AddrSize) add(.a(PC_curr),.b(1),.sum(PC_Temp));
 MUX #(AddrSize) Select_Jump(.a(Added_PC_from_Branch),.b(Added_PC_from_Jump),.Sel(Jump_Sel),.y(jump));
 MUX #(AddrSize) Select_PC(.a(PC_Temp),.b(jump),.Sel(PC_Select),.y(PC_NEW));
 Program_Counter #(AddrSize) PC(.PC_NEXT(PC_NEW),.PC_Curr(PC_curr),.clk(clk),.reset(reset));
-Inst_Mem #(AddrSize,2**Inst_Size,Inst_Size) Inst_Memory(.clk(clk),.addr(PC_curr),.inst(Inst));
+Inst_Mem #(AddrSize,Inst_Size) Inst_Memory(.addr(PC_curr),.inst(Inst));
 
 endmodule
