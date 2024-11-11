@@ -66,7 +66,7 @@ if(opcode == 7'b0110011 | opcode == 7'b0010011)
             3'b001:    //SLL
                 ALU_Ctrl = 5'b0111;
             3'b101:begin    //SR
-                if(func7 == 7'b0100000)
+                if(func7[5] == 1)
                     ALU_Ctrl= 5'b00110;
                 else
                     ALU_Ctrl = 5'b00101;
