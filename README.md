@@ -4,11 +4,11 @@ RISC-V Core with Base Integer and M type instructions
 #Status
 | Feature          | Completion Status | Testing Status   |
 |------------------|-------------------|------------------|
-| R-type           | - [X] Completed   | - [X] Tested     |
-| I-type           | - [X] Completed   | - [X] Tested     |
-| S-type           | - [X] Completed   | - [ ] Not Tested |
-| B-type           | - [X] Completed   | - [ ] Not Tested |
-| J-type           | - [X] Completed   | - [ ] Not Tested |
-| U-type           | - [X] Completed   | - [ ] Not Tested |
-| M-type           | - [X] Completed   | - [ ] Not Tested |
-| Pipeline         | - [ ]             | - [ ] Not Tested |
+| R-type           |   Completed   |   Tested     |
+| I-type           |   Completed   |   Tested     |
+| S-type           |   Completed   |   Not Tested |
+| B-type           |   Completed   |   Not Tested |
+| J-type           |   Completed   |   Not Tested |
+| U-type           |   Completed   |   Not Tested |
+| M-type           |   Completed   |   Not Tested |
+| Pipeline         |       -        |    |
