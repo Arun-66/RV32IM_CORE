@@ -27,9 +27,9 @@ module Ext_Memory#(parameter Size = 32)(
     input read_en,write_en,
     output reg [Size-1:0] Data_Out
     );
-reg [31:0] Mem [0:(2**Size)-1];
+reg [7:0] Mem [0:(2**Size)-1];
 
-always@(posedge write_en or posedge read_en)begin
+always@(*)begin
     Data_Out = 0;
     
     if(read_en)begin
